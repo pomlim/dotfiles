@@ -1,0 +1,448 @@
+{
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.cursorBlinking": "solid",
+  "vim.leader": "<space>",
+  "vim.surround": true,
+  "vim.insertModeKeyBindings": [
+    { "before": [ "<c-j>" ], "after": [ "<Enter>" ] },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": [ "<leader>", "s" ], "commands": [ "workbench.action.findInFiles" ] },
+    { "before": [ "<leader>", "w" ],
+      "commands": [ "workbench.action.files.saveWithoutFormatting" ]
+    },
+    { "before": [ "<leader>", "o" ], "after": [ "<C-w>", "o" ] },
+    { "before": [ "<leader>", "j" ], "after": [ "<C-w>", "j" ] },
+    { "before": [ "<leader>", "l" ], "after": [ "<C-w>", "l" ] },
+    { "before": [ "<leader>", "h" ], "after": [ "<C-w>", "h" ] },
+    { "before": [ "<leader>", "k" ], "after": [ "<C-w>", "k" ] },
+    { "before": [ "<leader>", "x" ], "after": [ "<C-w>", "c" ] },
+    { "before": [ "<leader>", "r" ], 
+      "commands": [ "workbench.action.openRecent" ]
+    },
+    {
+      "before": [ "<leader>", "R" ],
+      "commands": [
+        "workbench.action.toggleEditorGroupLayout",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    { "before": [ "<leader>", "e" ], "commands": [ "workbench.view.explorer" ] },
+    {
+      "before": [ "<leader>", "[" ],
+      "commands": [ ":tabo" ]
+    },
+    {
+      "before": [ "<leader>", "/" ],
+      "commands": [ ":noh" ]
+    },
+    {
+      "before": [ "<leader>", "c" ],
+      "commands": [ "workbench.action.closeEditorsAndGroup" ]
+    },
+    {
+      "before": [ "<leader>", "n" ],
+      "commands": [ "workbench.action.openRecent" ]
+    },
+    {
+      "before": [ "<leader>", "f" ],
+      "commands": [ "workbench.action.quickOpen" ]
+    },
+    {
+      "before": [ "<leader>", "8" ],
+      "commands": [ "editor.action.marker.nextInFiles" ]
+    },
+    {
+      "before": [ "<leader>", "|" ],
+      "commands": [ "workbench.action.toggleEditorWidths" ]
+    },
+    // VimWithOneleaderCommandandMultipleLetter
+    {
+      "before": [ "<leader>", "v", "a" ],
+      "commands": [ "workbench.action.toggleActivityBarVisibility" ]
+    },
+    // VimWithTwoleaderCommand
+    {
+      "before": [ "<leader>", "<leader>", "f" ],
+      "commands": [ "workbench.action.toggleFullScreen" ]
+    },
+    {
+      "before": [ "<leader>", "<leader>", "o" ],
+      "commands": [ "workbench.action.files.openFolder" ]
+    },
+    {
+      "before": [ "<leader>", "<leader>", "q" ],
+      "commands": [ "workbench.action.closeWindow" ]
+    },
+    {
+      "before": [ "<leader>", "<leader>", "s" ],
+      "commands": [ "workbench.action.splitEditorDown", "workbench.action.quickOpen" ]
+    },
+    {
+      "before": [ "<leader>", "<leader>", "v" ],
+      "commands": [ "workbench.action.splitEditor", "workbench.action.quickOpen" ]
+    },
+    {
+      "before": [ "<leader>", "<leader>", "w" ],
+      "commands": [ ":w" ]
+    },
+    {
+      "before": [ "<leader>", "<leader>", "k", "s" ],
+      "commands": [ "workbench.files.action.compareWithSaved" ]
+    },
+    {
+      "before": [ "<leader>", "<leader>", "k", "c" ],
+      "commands": [ "workbench.files.action.compareWithClipboard" ]
+    },
+    // ImproveVscodevim
+    {
+      "before": [ "<C-w>", "<C-c>" ],
+      "after": [ "<C-c>" ]
+    },
+    {
+      "before": [ "<C-w>", "|" ],
+      "commands": [ "workbench.action.toggleEditorWidths" ]
+    },
+    {
+      "before": [ "<C-o>" ],
+      "commands": [ "workbench.action.navigateBack" ]
+    },
+    {
+      "before": [ "<C-i>" ],
+      "commands": [ "workbench.action.navigateForward" ]
+    },
+    {
+      "before": [ "c", "i", "(" ],
+      "after": [ "f", "(", "c", "i", "(" ]
+    },
+    {
+      "before": [ "v", "i", "(" ],
+      "after": [ "f", "(", "v", "i", "(" ]
+    },
+    {
+      "before": [
+        "v",
+        "a",
+        "("
+      ],
+      "after": [
+        "f",
+        "(",
+        "v",
+        "a",
+        ")"
+      ]
+    },
+    {
+      "before": [
+        "y",
+        "i",
+        "("
+      ],
+      "after": [
+        "f",
+        "(",
+        "y",
+        "i",
+        "("
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "i",
+        "("
+      ],
+      "after": [
+        "f",
+        "(",
+        "d",
+        "i",
+        "("
+      ]
+    },
+    {
+      "before": [
+        "c",
+        "i",
+        "["
+      ],
+      "after": [
+        "f",
+        "[",
+        "c",
+        "i",
+        "["
+      ]
+    },
+    {
+      "before": [
+        "v",
+        "i",
+        "["
+      ],
+      "after": [
+        "f",
+        "[",
+        "v",
+        "i",
+        "["
+      ]
+    },
+    {
+      "before": [
+        "v",
+        "a",
+        "["
+      ],
+      "after": [
+        "f",
+        "[",
+        "v",
+        "a",
+        "]"
+      ]
+    },
+    {
+      "before": [
+        "y",
+        "i",
+        "["
+      ],
+      "after": [
+        "f",
+        "[",
+        "y",
+        "i",
+        "["
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "i",
+        "["
+      ],
+      "after": [
+        "f",
+        "[",
+        "d",
+        "i",
+        "["
+      ]
+    },
+    {
+      "before": [
+        "c",
+        "i",
+        "{"
+      ],
+      "after": [
+        "f",
+        "{",
+        "c",
+        "i",
+        "{"
+      ]
+    },
+    {
+      "before": [
+        "v",
+        "i",
+        "{"
+      ],
+      "after": [
+        "f",
+        "{",
+        "v",
+        "i",
+        "{"
+      ]
+    },
+    {
+      "before": [
+        "v",
+        "a",
+        "{"
+      ],
+      "after": [
+        "f",
+        "{",
+        "v",
+        "a",
+        "}"
+      ]
+    },
+    {
+      "before": [
+        "y",
+        "i",
+        "{"
+      ],
+      "after": [
+        "f",
+        "{",
+        "y",
+        "i",
+        "{"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "i",
+        "{"
+      ],
+      "after": [
+        "f",
+        "{",
+        "d",
+        "i",
+        "{"
+      ]
+    },
+    {
+      "before": [
+        "c",
+        "i",
+        "<"
+      ],
+      "after": [
+        "f",
+        "<",
+        "c",
+        "i",
+        "<"
+      ]
+    },
+    {
+      "before": [
+        "v",
+        "i",
+        "<"
+      ],
+      "after": [
+        "f",
+        "<",
+        "v",
+        "i",
+        "<"
+      ]
+    },
+    {
+      "before": [
+        "v",
+        "a",
+        "<"
+      ],
+      "after": [
+        "f",
+        "<",
+        "v",
+        "a",
+        ">"
+      ]
+    },
+    {
+      "before": [
+        "y",
+        "i",
+        "<"
+      ],
+      "after": [
+        "f",
+        "<",
+        "y",
+        "i",
+        "<"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "i",
+        "<"
+      ],
+      "after": [
+        "f",
+        "<",
+        "d",
+        "i",
+        "<"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "l"
+      ],
+      "commands": [
+        "editor.action.revealDefinition",
+        "workbench.action.moveEditorToRightGroup"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "s"
+      ],
+      "commands": [
+        "editor.action.revealDefinition",
+        "workbench.action.moveEditorToBelowGroup"
+      ]
+    },
+    {
+      "before": [
+        "u"
+      ],
+      "commands": [
+        "undo"
+      ]
+    },
+    {
+      "before": [
+        "<C-r>"
+      ],
+      "commands": [
+        "redo"
+      ]
+    }
+  ],
+  "window.restoreWindows": "none",
+  "window.zoomLevel": 2,
+  "editor.minimap.enabled": false,
+  "vim.easymotion": true,
+  "vim.hlsearch": true,
+  "workbench.sideBar.location": "right",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.formatOnSave": true,
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#4a92ef4d",
+    "sideBarSectionHeader.background": "#575757fa",
+    "searchEditor.findMatchBackground": "#1985f2bd",
+    "list.focusBackground": "#1985f2bd",
+    "list.activeSelectionBackground": "#1985f2bd",
+    "tab.activeBackground": "#4a92ef4d",
+    "tab.activeForeground": "#f8fafd"
+  },
+  "editor.rename.enablePreview": false,
+  "workbench.editor.enablePreview": false,
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 7,
+  "breadcrumbs.enabled": false,
+  "json.format.enable": false,
+  "workbench.activityBar.location": "hidden",
+  "vim.highlightedyank.enable": true
+}

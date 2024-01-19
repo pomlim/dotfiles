@@ -1,0 +1,12 @@
+api.map('<ctrl-[>', '<Esc>');
+api.map('or', 'f');
+api.map('of', 'cf');
+api.map('<Ctrl-Alt-h>', 'gx0');
+api.map('<Ctrl-Alt-l>', 'gx$');
+api.imap('<Ctrl-[>', '<Esc>');
+api.vmap('<Ctrl-[>', '<Esc>');
+api.cmap('<Ctrl-[>', '<Esc>');
+api.cmap('<Ctrl-j>', '<Tab>');
+api.cmap('<Ctrl-k>', '<Shift-Tab>');
+api.map('<Alt-j>', 'E');
+api.map('<Alt-k>', 'R');

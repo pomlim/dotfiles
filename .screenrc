@@ -1,0 +1,6 @@
+escape ^Tt
+hardstatus alwayslastline "%{+r} %-w%{+bu I}%n-%t%{-}%+w %= %{+ b}%11` %{-}%D %d %LM %{+b I}%c "
+bind j focus down
+bind k focus up
+bind l focus right
+bind h focus left

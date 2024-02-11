@@ -10,3 +10,6 @@ api.cmap('<Ctrl-j>', '<Tab>');
 api.cmap('<Ctrl-k>', '<Shift-Tab>');
 api.map('<Alt-j>', 'E');
 api.map('<Alt-k>', 'R');
+api.map('D', 'u');
+api.map('e', 'j');
+api.map('r', 'k');

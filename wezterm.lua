@@ -4,8 +4,8 @@ wezterm.on("gui-startup", function(cmd)
   window:gui_window():maximize()
 end)
 return {
-    default_prog = { 'C:\\cygwin64\\bin\\bash'},
     disable_default_key_bindings = false,
+    default_domain = 'WSL:Ubuntu-22.04',
     color_scheme = "Nord (base16)",
     -- FONT
     font = wezterm.font({ family = 'Cascadia Code', harfbuzz_features = { 'liga=1' }, }),
@@ -20,6 +20,7 @@ return {
         { key = 'k', mods = 'CTRL|ALT', action = wezterm.action.ActivatePaneDirection 'Up', },
         { key = 'j', mods = 'CTRL|ALT', action = wezterm.action.ActivatePaneDirection 'Down', },
         { key = "'", mods = 'CTRL|ALT', action = wezterm.action.SplitHorizontal({domain = 'CurrentPaneDomain' }) },
+        { key = '\\', mods = 'ALT', action = wezterm.action.SplitHorizontal({domain = 'CurrentPaneDomain' }) },
         { key = 's', mods = 'CTRL|ALT', action = wezterm.action.SplitVertical({domain = 'CurrentPaneDomain' }) },
         -- Tab
         { key = 't', mods = 'CTRL|ALT', action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }) },
@@ -29,6 +30,7 @@ return {
         { key = '4', mods = 'CTRL|ALT', action = wezterm.action({ ActivateTab = 3 }) },
         { key = 'p', mods = 'CTRL|ALT', action = wezterm.action({ ActivateTabRelative = 1 }) },
         { key = 'n', mods = 'CTRL|ALT', action = wezterm.action({ ActivateTabRelative = -1 }) },
+        { key = 'w', mods = 'CTRL|ALT', action = wezterm.action.CloseCurrentTab { confirm = true }},
         -- Copy Mode
         { key = 'x', mods = 'CTRL|ALT', action = wezterm.action.ActivateCopyMode},
         { key = 'c', mods = 'CTRL|ALT', action = wezterm.action({ CopyTo = "Clipboard" }) },

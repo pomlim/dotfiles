@@ -2,10 +2,9 @@ set t_vb=
 syntax on
 
 set path+=**
-set wildmenu
-set wildoptions=pum
 set ic
 set number
+set incsearch
 set hlsearch
 set autoindent
 set splitbelow
@@ -20,6 +19,9 @@ set mouse=a
 set encoding=utf-8
 colorscheme pablo
 set backspace=indent,eol,start
+set wildmenu
+set wildcharm=<tab>
+set shortmess-=S
 
 let mapleader = ' '
 
@@ -33,6 +35,8 @@ nnoremap <leader><leader>v :vs
 nnoremap <leader><leader>s :sp <bar> find 
 nnoremap <leader><leader>q :qa<CR>
 nnoremap <leader>/ :noh<CR>
+nnoremap <leader>i :noh<CR>
+nnoremap <leader><tab> :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :q<CR>
 nnoremap <leader>f :find 
@@ -58,7 +62,10 @@ map <leader>L <C-W>L
 map <leader>R <C-W>R
 map <leader>c <C-W>c
 map <leader>o <C-W>o
+map <tab> g_
 map <C-\> <C-W>v
+nmap gi /
+nmap go ?
 
 map <C-h> :unhide <CR><C-W>j
 tnoremap <C-h> <C-W>:hide<CR>
@@ -70,3 +77,6 @@ vnoremap <leader>d "_d
 " replace currently selected text with default register
 " without yanking it
 vnoremap <leader>p "_dP
+cnoremap <expr> <tab> getcmdtype() =~ '^[/?]$' ? '<CR>' : '<tab>'
+cnoremap <expr> <C-d> getcmdtype() =~ '^[/?]$' ? '<C-g>' : '<C-d>'
+cnoremap <expr> <C-u> getcmdtype() =~ '^[/?]$' ? '<C-t>' : '<C-u>'

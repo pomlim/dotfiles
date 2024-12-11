@@ -17,7 +17,6 @@ set relativenumber
 set scrolloff=7
 set mouse=a
 set encoding=utf-8
-colorscheme pablo
 set backspace=indent,eol,start
 set wildmenu
 set wildcharm=<tab>
@@ -64,8 +63,9 @@ map <leader>c <C-W>c
 map <leader>o <C-W>o
 map <tab> g_
 map <C-\> <C-W>v
-nmap gi /
-nmap go ?
+map <C-j> <C-i>
+nmap go /
+nmap gu ?
 
 map <C-h> :unhide <CR><C-W>j
 tnoremap <C-h> <C-W>:hide<CR>

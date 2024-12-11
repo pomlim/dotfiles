@@ -53,7 +53,7 @@
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+l",
     "command": "togglePeekWidgetFocus",
     "when": "inReferenceSearchEditor || referenceSearchVisible"
   },
@@ -188,7 +188,7 @@
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
-    "key": "alt+o",
+    "key": "alt+[",
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
@@ -268,6 +268,11 @@
   },
   {
     "key": "ctrl+f",
+    "command": "list.select",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+m",
     "command": "list.select",
     "when": "listFocus && !inputFocus"
   },
@@ -464,7 +469,7 @@
     "when": "editorHoverFocused"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+m",
     "command": "workbench.action.acceptSelectedQuickOpenItem",
     "when": "inQuickOpen"
   },
@@ -492,7 +497,7 @@
     "when": "listFocus && listSupportsFind"
   },
   {
-    "key": "g i",
+    "key": "g o",
     "command": "list.find",
     "when": "listFocus && listSupportsFind && !inputFocus"
   },
@@ -679,7 +684,7 @@
     "when": "listFocus && treeFindOpen"
   },
   {
-    "key": "space t",
+    "key": "space u",
     "command": "timeline.toggleVisibility",
     "when": "listFocus && !inputFocus"
   },
@@ -765,7 +770,7 @@
     "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
   },
   {
-    "key": "alt+[",
+    "key": "alt+o",
     "command": "workbench.action.closeSidebar"
   },
   {
@@ -950,7 +955,7 @@
     "when": "inputFocus && treeFindOpen"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+m",
     "command": "workbench.view.explorer",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && inputFocus"
   },
@@ -1074,5 +1079,30 @@
     "key": "ctrl+shift+-",
     "command": "notebook.cell.insertMarkdownCellAbove",
     "when": "editorTextFocus && inputFocus && notebookEditorFocused && !notebookOutputInputFocused"
-  }
+  },
+  {
+    "key": "ctrl+m",
+    "command": "-editor.action.toggleTabFocusMode"
+  },
+  {
+    "key": "alt+f",
+    "command": "list.toggleFilterOnType",
+    "when": "listFocus && treeFindOpen",
+  },
+  {
+    "key": "s",
+    "command": "vim.remap",
+    "when": "editorFocus && vim.active && vim.mode == 'SurroundInputMode'",
+    "args": {
+      "after": ["'"]
+    }
+  },
+  {
+    "key": "q",
+    "command": "vim.remap",
+    "when": "editorFocus && vim.active && vim.mode == 'SurroundInputMode'",
+    "args": {
+      "after": ["\""]
+    }
+  },
 ]

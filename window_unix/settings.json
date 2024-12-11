@@ -31,21 +31,18 @@
       "after": ["/"]
     },
     { "before": ["<leader>", "y"], "after": ["\"", "a", "y"] },
-    { "before": ["<leader>", "p"], "after": ["\"", "a", "p"] }
+    { "before": ["<leader>", "p"], "after": ["\"", "a", "p"] },
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["d", "w"], "after": ["0"] },
+    { "before": ["d", "r"], "after": [":"] },
+    { "before": ["g", "o"], "after": ["/"] },
+    { "before": ["g", "u"], "after": ["?"] }
   ],
   "vim.operatorPendingModeKeyBindings": [
     { "before": ["tab"], "after": ["g", "_"] }
   ],
   "vim.normalModeKeyBindings": [
-    {
-      "before": ["y", "s", "i", "w", "q"],
-      "after": ["y", "s", "i", "w", "\""]
-    },
-    { "before": ["y", "s", "i", "w", "s"], "after": ["y", "s", "i", "w", "'"] },
-    {
-      "before": ["y", "s", "i", "w", "2", "}"],
-      "after": ["y", "s", "i", "w", "}", "l", "y", "s", "i", "w", "{"]
-    },
     { "before": ["c", "s", "q", "s"], "after": ["c", "s", "\"", "'"] },
     { "before": ["c", "s", "s", "q"], "after": ["c", "s", "'", "\""] }
   ],
@@ -56,6 +53,10 @@
       "commands": ["workbench.action.files.saveWithoutFormatting"]
     },
     {
+      "before": ["<leader>", "v"],
+      "after": ["`", "[", "v", "`", "]"]
+    },
+    {
       "before": ["<leader>", "o"],
       "commands": [
         "workbench.action.closeEditorsInOtherGroups",
@@ -63,22 +64,18 @@
         "workbench.action.closePanel"
       ]
     },
-    {
-      "before": ["<leader>", "1"],
-      "commands": ["workbench.action.closeEditorsInOtherGroups"]
-    },
     { "before": ["<leader>", "j"], "after": ["<C-w>", "j"] },
     { "before": ["<leader>", "l"], "after": ["<C-w>", "l"] },
     { "before": ["<leader>", "h"], "after": ["<C-w>", "h"] },
     { "before": ["<leader>", "k"], "after": ["<C-w>", "k"] },
     { "before": ["<leader>", "x"], "after": ["<C-w>", "c"] },
     {
-      "before": ["<leader>", "t"],
+      "before": ["<leader>", "u"],
       "commands": ["timeline.focus"]
     },
     {
       "before": ["<leader>", "b"],
-      "commands": ["workbench.files.action.focusOpenEditorsView"]
+      "commands": ["workbench.action.showAllEditors"]
     },
     {
       "before": ["<leader>", "R"],
@@ -87,70 +84,42 @@
         "workbench.action.focusActiveEditorGroup"
       ]
     },
+
+    // UI componets
     { "before": ["<leader>", "e"], "commands": ["workbench.view.explorer"] },
     {
-      "before": ["<leader>", "m"],
-      "commands": ["editor.emmet.action.matchTag"]
+      "before": ["<leader>", "s", "g"],
+      "commands": ["workbench.action.findInFiles"]
     },
-    { "before": ["<leader>", "u"], "commands": [":tabo"] },
-    { "before": ["<leader>", "/"], "commands": [":noh"] },
     {
-      "before": ["<leader>", "c"],
-      "commands": ["workbench.action.closeEditorsAndGroup"]
+      "before": ["<leader>", "s", "r"],
+      "commands": ["workbench.action.findInFiles", "toggleSearchRegex"]
     },
+    {
+      "before": ["<leader>", "s", "w"],
+      "commands": ["workbench.action.findInFiles", "toggleSearchWholeWord"]
+    },
+    { "before": ["<leader>", "t"], "commands": [":tabo"] },
     {
       "before": ["<leader>", "n"],
       "commands": ["workbench.action.openRecent"]
     },
     { "before": ["<leader>", "f"], "commands": ["workbench.action.quickOpen"] },
+    // Symbol navigate
+    { "before": ["<leader>", ";"], "after": ["f", ":", "w"] },
+    { "before": ["<leader>", "-"], "after": ["f", "_", "l"] },
+    { "before": ["<leader>", "0"], "after": ["f", "=", "w"] },
+    { "before": ["<leader>", "q"], "after": ["f", "\"", "l"] },
+    { "before": ["<leader>", "9"], "after": ["f", "(", "l"] },
+    { "before": ["<leader>", "r"], "after": ["f", "[", "l"] },
+    { "before": ["<leader>", "["], "after": ["f", "[", "l"] },
+    { "before": ["<leader>", ","], "after": ["f", ",", "w"] },
+    { "before": ["<leader>", "."], "after": ["f", ">", "l"] },
+    { "before": ["<leader>", "a"], "after": ["f", "<", "l"] },
+    { "before": ["<leader>", "c"], "after": ["f", "{", "w"] },
     {
-      "before": ["<leader>", "|"],
-      "commands": ["workbench.action.toggleEditorWidths"]
-    },
-    // Navigate
-    {
-      "before": ["<leader>", ";"],
-      "after": ["f", ":", "w"]
-    },
-    {
-      "before": ["<leader>", "-"],
-      "after": ["f", "_", "l"]
-    },
-    {
-      "before": ["<leader>", "0"],
-      "after": ["f", "=", "w"]
-    },
-    {
-      "before": ["<leader>", "q"],
-      "after": ["f", "\"", "l"]
-    },
-    {
-      "before": ["<leader>", "s"],
-      "after": ["f", "'", "l"]
-    },
-    {
-      "before": ["<leader>", "9"],
-      "after": ["f", "(", "l"]
-    },
-    {
-      "before": ["<leader>", "r"],
-      "after": ["f", "[", "l"]
-    },
-    {
-      "before": ["<leader>", ","],
-      "after": ["f", ",", "w"]
-    },
-    {
-      "before": ["<leader>", "."],
-      "after": ["f", ".", "l"]
-    },
-    {
-      "before": ["<leader>", "a"],
-      "after": ["f", "<", "l"]
-    },
-    {
-      "before": ["<leader>", "]"],
-      "after": ["f", "{", "w"]
+      "before": ["<leader>", "m"],
+      "commands": ["editor.emmet.action.matchTag"]
     },
     {
       "before": ["<leader>", "i"],
@@ -158,11 +127,16 @@
     },
     {
       "before": ["<leader>", "<tab>"],
+      "commands": [":noh"]
+    },
+    {
+      "before": ["<leader>", "<leader>","<tab>"],
       "commands": ["workbench.action.switchWindow"]
     },
     // SingleLeaderAndMultipleLetters
+    { "before": ["J"], "after": ["m", "z", "J", "`", "z"] },
     {
-      "before": ["<leader>", "v", "a"],
+      "before": ["<leader>", "<leader>", "v", "a"],
       "commands": ["workbench.action.toggleActivityBarVisibility"]
     },
     {
@@ -186,10 +160,6 @@
       "after": ["'", "D"]
     },
     // DoubleLeaderAndSingleLetter
-    {
-      "before": ["<leader>", "<leader>", "s"],
-      "commands": ["workbench.action.findInFiles"]
-    },
     {
       "before": ["<leader>", "<leader>", "v"],
       "commands": ["workbench.action.splitEditor", "workbench.action.quickOpen"]
@@ -251,18 +221,19 @@
       "before": ["<leader>", "<leader>", "<leader>", "o"],
       "commands": ["workbench.action.files.openFolder"]
     },
-    {
-      "before": ["<leader>", "<leader>", "<leader>", "a"],
-      "after": ["m", "A"]
-    },
-    {
-      "before": ["<leader>", "<leader>", "<leader>", "c"],
-      "after": ["m", "C"]
-    },
-    {
-      "before": ["<leader>", "<leader>", "<leader>", "d"],
-      "after": ["m", "D"]
-    },
+    // Marks
+    { "before": ["<leader>", "<leader>", "1"], "after": ["m", "A"] },
+    { "before": ["<leader>", "<leader>", "2"], "after": ["m", "S"] },
+    { "before": ["<leader>", "<leader>", "3"], "after": ["m", "D"] },
+    { "before": ["<leader>", "<leader>", "4"], "after": ["m", "F"] },
+    { "before": ["<leader>", "1"], "after": ["'", "A"] },
+    { "before": ["<leader>", "2"], "after": ["'", "S"] },
+    { "before": ["<leader>", "3"], "after": ["'", "D"] },
+    { "before": ["<leader>", "4"], "after": ["'", "F"] },
+    { "before": ["<C-h>"], "after": ["'", "A"] },
+    { "before": ["<C-k>"], "after": ["'", "S"] },
+    { "before": ["<C-l>"], "after": ["'", "D"] },
+    { "before": ["<C-t>"], "after": ["'", "F"] },
     // KeyCombo
     { "before": ["tab"], "after": ["g", "_"] },
     { "before": ["v", "i", "s"], "after": ["v", "i", "'"] },
@@ -282,29 +253,20 @@
       "before": ["g", "h"],
       "commands": ["editor.action.showDefinitionPreviewHover"]
     },
-    {
-      "before": ["d", "c"],
-      "commands": ["editor.action.commentLine"]
-    },
-    {
-      "before": ["g", "i"],
-      "after": ["/"]
-    },
-    {
-      "before": ["g", "o"],
-      "after": ["?"]
-    },
+    // remap exist keybinding for comfortable
+    { "before": ["d", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["g", "o"], "after": ["m", "s", "/"] },
+    { "before": ["g", "u"], "after": ["m", "s", "?"] },
+    { "before": ["s", "f"], "after": ["F"] },
+    { "before": ["s", "t"], "after": ["T"] },
+    { "before": ["3", "3", "j"], "after": ["6", "j"] },
+    { "before": ["3", "3", "k"], "after": ["6", "k"] },
+    { "before": ["d", "w"], "after": ["0"] },
+    { "before": ["s", "d"], "after": [":"] },
+    // For accurate
     { "before": ["u"], "commands": ["undo"] },
-    // 5. CtrlKey
-    { "before": ["<C-w>", "<C-c>"], "after": ["<C-c>"] },
     { "before": ["<C-r>"], "commands": ["redo"] },
-    {
-      "before": ["<C-q>"],
-      "commands": [
-        "workbench.action.togglePanel",
-        "workbench.action.focusActiveEditorGroup"
-      ]
-    },
+    { "before": ["<C-w>", "<C-c>"], "after": ["<C-c>"] },
     {
       "before": ["<C-w>", "v"],
       "commands": ["workbench.action.splitEditorRight"]
@@ -314,7 +276,19 @@
       "commands": ["workbench.action.splitEditorDown"]
     },
     { "before": ["<C-o>"], "commands": ["workbench.action.navigateBack"] },
-    { "before": ["<C-i>"], "commands": ["workbench.action.navigateForward"] }
+    { "before": ["<C-i>"], "commands": ["workbench.action.navigateForward"] },
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+    { "before": ["n"], "after": ["n", "z", "z", "z", "v"] },
+    { "before": ["N"], "after": ["N", "z", "z"] },
+    // 5. CtrlKey
+    {
+      "before": ["<C-q>"],
+      "commands": [
+        "workbench.action.togglePanel",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    }
   ],
   // VscodeSettings
   "editor.minimap.enabled": false,
@@ -429,9 +403,10 @@
   "workbench.list.defaultFindMatchType": "contiguous",
   "editor.formatOnSave": true,
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    // "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "workbench.colorTheme": "One Dark Pro Mix",
+  "workbench.colorTheme": "One Dark Pro",
   "editor.stickyScroll.enabled": false,
   "editor.accessibilitySupport": "on",
   "gitlens.codeLens.enabled": false,
@@ -441,6 +416,7 @@
     "workbench.action.focusActiveEditorGroup",
     "workbench.files.action.focusFilesExplorer"
   ],
-  "workbench.activityBar.location": "hidden",
-  "accessibility.signalOptions.volume": 0
+  "accessibility.signalOptions.volume": 0,
+  "editor.parameterHints.enabled": false,
+  "workbench.activityBar.location": "hidden"
 }

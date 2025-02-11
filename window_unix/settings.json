@@ -37,7 +37,8 @@
     { "before": ["d", "w"], "after": ["0"] },
     { "before": ["d", "r"], "after": [":"] },
     { "before": ["g", "o"], "after": ["/"] },
-    { "before": ["g", "u"], "after": ["?"] }
+    { "before": ["g", "u"], "after": ["?"] },
+    { "before": ["d", "f"], "after": ["F"] }
   ],
   "vim.operatorPendingModeKeyBindings": [
     { "before": ["tab"], "after": ["g", "_"] }
@@ -130,7 +131,7 @@
       "commands": [":noh"]
     },
     {
-      "before": ["<leader>", "<leader>","<tab>"],
+      "before": ["<leader>", "<leader>", "<tab>"],
       "commands": ["workbench.action.switchWindow"]
     },
     // SingleLeaderAndMultipleLetters
@@ -257,12 +258,11 @@
     { "before": ["d", "c"], "commands": ["editor.action.commentLine"] },
     { "before": ["g", "o"], "after": ["m", "s", "/"] },
     { "before": ["g", "u"], "after": ["m", "s", "?"] },
-    { "before": ["s", "f"], "after": ["F"] },
-    { "before": ["s", "t"], "after": ["T"] },
+    { "before": ["d", "f"], "after": ["F"] },
     { "before": ["3", "3", "j"], "after": ["6", "j"] },
     { "before": ["3", "3", "k"], "after": ["6", "k"] },
     { "before": ["d", "w"], "after": ["0"] },
-    { "before": ["s", "d"], "after": [":"] },
+    { "before": ["d", "q"], "after": [":"] },
     // For accurate
     { "before": ["u"], "commands": ["undo"] },
     { "before": ["<C-r>"], "commands": ["redo"] },
@@ -418,5 +418,5 @@
   ],
   "accessibility.signalOptions.volume": 0,
   "editor.parameterHints.enabled": false,
-  "workbench.activityBar.location": "hidden"
+  "git.untrackedChanges": "separate"
 }

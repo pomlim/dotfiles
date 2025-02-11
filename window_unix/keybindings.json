@@ -436,10 +436,6 @@
   },
   {
     "key": "alt+n",
-    "command": "search.action.focusSearchList"
-  },
-  {
-    "key": "alt+n",
     "command": "list.toggleSelection",
     "when": "listFocus && !inputFocus"
   },
@@ -1087,7 +1083,7 @@
   {
     "key": "alt+f",
     "command": "list.toggleFilterOnType",
-    "when": "listFocus && treeFindOpen",
+    "when": "listFocus && treeFindOpen"
   },
   {
     "key": "s",
@@ -1105,4 +1101,9 @@
       "after": ["\""]
     }
   },
+  {
+    "key": "ctrl+alt+c",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+  }
 ]

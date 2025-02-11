@@ -546,7 +546,7 @@
   },
   {
     "key": "tab",
-    "command": "list.closeFind",
+    "command": "list.focusDown",
     "when": "listFocus && treeFindOpen"
   },
   {
@@ -682,6 +682,11 @@
   {
     "key": "space u",
     "command": "timeline.toggleVisibility",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "space o",
+    "command": "outline.toggleVisibility",
     "when": "listFocus && !inputFocus"
   },
   {
